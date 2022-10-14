@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   before(:all) do
-    @user = User.new(name: 'Amos', email: 'kinyeramo432@gmail.com', password: '125346')
+    @user = User.new(name: 'Ranjit', email: 'example1@test.com', password: '123456')
   end
 
   describe 'Validations' do
@@ -10,17 +10,17 @@ RSpec.describe User, type: :model do
       expect(@user).to be_valid
     end
 
-    it 'it should not be valid without name' do
+    it 'should not be valid without name' do
       @user.name = nil
       expect(@user).to_not be_valid
     end
 
-    it 'it should not be valid without email' do
+    it 'should not be valid without email' do
       @user.email = nil
       expect(@user).to_not be_valid
     end
 
-    it 'it should not be valid without password' do
+    it 'should not be valid without password' do
       @user.password = nil
       expect(@user).to_not be_valid
     end
